@@ -186,5 +186,17 @@ footer a{color:var(--marsala)}
   <p style="margin-top:8px"><a href="/privacidade.html">Política de Privacidade</a> · <a href="https://www.instagram.com/nutri.jaqueferreira">Instagram</a></p>
  </div>
 </footer>
+<script>
+// Conversão Google Ads: clique em "Começar minha pré-consulta"
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a.btn'); if(!a||a.getAttribute('href')!=='/') return;
+  e.preventDefault(); var url=a.href, foi=false;
+  function ir(){ if(!foi){ foi=true; window.location=url; } }
+  if(typeof gtag==='function'){
+    gtag('event','conversion',{'send_to':'AW-18546355555/o0asCLu7iq8dEOPay4tF','value':1.0,'currency':'BRL','event_callback':ir});
+  }
+  setTimeout(ir,800);
+});
+</script>
 </body>
 </html>
